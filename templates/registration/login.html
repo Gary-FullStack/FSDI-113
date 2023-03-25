@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Log in {% endblock title %}
+
+
+
+
+
+
+<div class="container" >
+    
+    {% block content %}
+
+    <div class="fields">  
+        <h1> Sign on</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class= "btn btn-success" value="Login">
+            </form>
+    </div>        
+
+    {% endblock content %}
+
+</div>

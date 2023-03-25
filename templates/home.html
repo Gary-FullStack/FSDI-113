@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Messages R Us{% endblock title %}
+
+
+<div class="container">
+    {% block content %}
+
+    <header>      
+        <img src="{% static '/images/conspiracyhat2.jpg' %}" alt="come at me bro" class="profile-image">
+        <h1 class="tag name">Come at me Bro!</h1>        
+      </header>
+
+      <main class="flex">
+        <div class="card">
+          <h2>Do You even lift, bro?</h2>
+          <p>You think your sauce is strong, bro?   Come on in and leave a message and then defend it ... if you can. </p>
+          <li><a href="{% url 'login' %}">Login to Post</a></li>
+          <li><a href="{% url 'list' %}">Current Posts</a></li>
+        </div> 
+        
+    
+      </main>
+      <footer>
+        <p class="copyright">Copyright 2023, Recon7</p>
+      </footer>
+
+    {% endblock content %}
+</div>

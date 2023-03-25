@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Edit Message {% endblock title %}
+
+
+{% block content %}
+
+<h1> Edit Here</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class= "btn btn-success" value="Save Edit">
+    </form>
+{% endblock content %}

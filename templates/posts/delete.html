@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Delete your Message  {% endblock title %}
+
+
+{% block content %}
+
+<h1> Delete This</h1>
+<p>Do you want to delete "{{post.title}}"?</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class= "btn btn-danger" value="Confirm">
+    </form>
+{% endblock content %}  
