@@ -6,6 +6,8 @@
 
 <div class="container">
     {% block content %}
+
+    <small>Current date/time: {{ timestamp }}</small>   
     
     <h1>Posts from the message Board</h1>
         {% for post in post_list %}
