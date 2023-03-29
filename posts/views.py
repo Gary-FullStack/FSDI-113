@@ -20,7 +20,7 @@ class PostListView(ListView):
         context["timestamp"] = datetime.now().strftime("%F %H:%M:%S")
         return context
 
-class DraftPostListView(ListView):
+class DraftPostListView(LoginRequiredMixin, ListView):
     template_name = "posts/list.html"
     model = Post
 
@@ -60,5 +60,5 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     success_url = reverse_lazy("home")  
 
     def test_func(self):
-        obj = self.get_object()
+        obj = self.get_object() 
         return obj.author == self.request.user  

@@ -4,46 +4,29 @@
 
 {% block title %}Messages R Us{% endblock title %}
 
-{% block content %}
 
-<html>
-   <body>
-      <main class="flex-column small">
+<div class="flex-home">
+    {% block content %}
+    
+    
+    <header>      
+        <img src="{% static '/images/conspiracyhat2.jpg' %}" alt="come at me bro" class="profile-image">
+        <h1 class="tagname">Come at me Bro!</h1>        
+      </header>
+
+      <main class="flex">
+        <div class="card">
+          <h2>Do You even lift, bro?</h2>
+          <p>You think your sauce is strong?   Come in and leave a message and then defend it ... if you can. </p>
+          <li><a href="{% url 'login' %}">Login to Post</a></li>
+          <li><a href="{% url 'list' %}">Current Posts</a></li>
+        </div> 
         
-            <div class="card">
-              <img src="{% static '/images/conspiracyhat2.jpg' %}" alt="foil hat" class="profile-image">
-              <h1 class="tag name">Come at me Bro!</h1>          
-            </div>
-        <div class="flex-row">     
-              <div class="card">
-                <h2>You're Sauce is weak!</h2>
-                <p>You got no game, my guy.   You are the reason they put instructions on Shampoo bottles. </p>
-                <p> Can you talk the talk?  Come in and prove it.</p>
-                <p>Its ok if you are trash,  its called a garbage CAN not a garbage Can-NOT.</p>
-
-                <li><a href="{% url 'login' %}">Login to Post</a></li>
-                <li><a href="{% url 'list' %}">Current Posts</a></li>
-              </div>
-
-              <div class="card">
-                <h2>Old School Trash Talk only:</h2>
-                <p>Don't step in the ring if you can't take a hit.</p>
-                <p> You will be hit with classics like:</p>
-                <ul class="skills">
-                  <li>yo mama is so ... </li>
-                  <li>You are so dumb</li>
-                  <li>Kids beat you up</li>
-                  <li> And many more!</li>
-                </ul>            
-              </div>
-          </div>    
-          
+    
       </main>
-
-      <footer>      
+      <footer>
         <p class="copyright">Copyright 2023, Recon7</p>
       </footer>
-   </body>
 
-</html>
-{% endblock content %}
+    {% endblock content %}
+</div>

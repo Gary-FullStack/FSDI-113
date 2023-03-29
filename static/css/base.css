@@ -50,7 +50,6 @@ a:hover {
 
 header {
   text-align: center;
-  background: url("images/pilotmtn.png") no-repeat top center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -144,15 +143,7 @@ a.social {
   opacity: 0.5;
   transition: all 0.25s;
 }
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
-a.github {
-  background-image: url(images/github.svg);
-}
+
 a.social:hover {
   opacity: 1;
 }
